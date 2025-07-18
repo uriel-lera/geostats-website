@@ -26,12 +26,12 @@
     --text-muted: #6B7280;              /* Gris para texto secundario */
     --text-accent: #003849;             /* Azul para acentos */
     
-    /* Backgrounds */
-    --background: #FFFFFF;              /* Fondo principal blanco */
-    --background-secondary: #F8F8F8;    /* Fondo secundario claro */
-    --surface: #FFFFFF;                 /* Superficies blancas */
-    --surface-light: #F8F8F8;           /* Superficies claras */
-    --border: #E5E7EB;                  /* Bordes suaves */
+    /* Backgrounds Mejorados */
+    --background: #FEFEFE;              /* Fondo principal blanco hueso */
+    --background-secondary: #F5F5F5;    /* Fondo secundario gris muy claro */
+    --surface: #FAFAFA;                 /* Superficies blanco hueso */
+    --surface-light: #F7F7F7;           /* Superficies claras */
+    --border: #E0E4E7;                  /* Bordes más definidos */
     
     /* Gradientes Renovados */
     --gradient-primary: linear-gradient(135deg, #003849 0%, #331832 100%);
@@ -67,7 +67,7 @@ body {
     padding: 0 20px;
 }
 
-/* Floating Particles Background */
+/* Floating Particles Background - Mejorado */
 .particles-container {
     position: fixed;
     top: 0;
@@ -84,15 +84,18 @@ body {
     height: 4px;
     background: var(--primary-color);
     border-radius: 50%;
-    opacity: 0.3;
+    opacity: 0.4;
     animation: float 6s ease-in-out infinite;
 }
 
+/* Más partículas con diferentes formas y tamaños */
 .particle:nth-child(1) {
     top: 20%;
     left: 20%;
     animation-delay: 0s;
     background: var(--primary-color);
+    width: 3px;
+    height: 3px;
 }
 
 .particle:nth-child(2) {
@@ -100,6 +103,8 @@ body {
     left: 80%;
     animation-delay: 2s;
     background: var(--accent-color);
+    width: 5px;
+    height: 5px;
 }
 
 .particle:nth-child(3) {
@@ -107,6 +112,10 @@ body {
     left: 30%;
     animation-delay: 4s;
     background: var(--secondary-color);
+    border-radius: 0;
+    transform: rotate(45deg);
+    width: 4px;
+    height: 4px;
 }
 
 .particle:nth-child(4) {
@@ -114,6 +123,9 @@ body {
     left: 70%;
     animation-delay: 1s;
     background: var(--chili-red);
+    border-radius: 2px;
+    width: 6px;
+    height: 2px;
 }
 
 .particle:nth-child(5) {
@@ -121,6 +133,73 @@ body {
     left: 60%;
     animation-delay: 3s;
     background: var(--pistachio);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 5px;
+    height: 5px;
+}
+
+/* Añadir elementos de datos flotantes */
+.data-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.data-point {
+    position: absolute;
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.3;
+    animation: dataFloat 8s ease-in-out infinite;
+}
+
+.data-point:nth-child(1) {
+    top: 15%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.data-point:nth-child(2) {
+    top: 25%;
+    left: 85%;
+    animation-delay: 2s;
+}
+
+.data-point:nth-child(3) {
+    top: 75%;
+    left: 10%;
+    animation-delay: 4s;
+}
+
+.data-point:nth-child(4) {
+    top: 45%;
+    left: 90%;
+    animation-delay: 1s;
+}
+
+.data-point:nth-child(5) {
+    top: 85%;
+    left: 85%;
+    animation-delay: 3s;
+}
+
+@keyframes dataFloat {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg); 
+        opacity: 0.2;
+    }
+    33% { 
+        transform: translateY(-15px) translateX(10px) rotate(120deg); 
+        opacity: 0.4;
+    }
+    66% { 
+        transform: translateY(8px) translateX(-5px) rotate(240deg); 
+        opacity: 0.3;
+    }
 }
 
 @keyframes float {
@@ -134,19 +213,19 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(254, 254, 254, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
     border-bottom: 1px solid rgba(0, 56, 73, 0.1);
-    box-shadow: var(--shadow);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -154,13 +233,24 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
+    gap: 0.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-logo img {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.nav-logo span {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
 
 .nav-logo i {
@@ -222,7 +312,7 @@ body {
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(135deg, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%);
+    background: linear-gradient(135deg, #F5F5F5 0%, #FEFEFE 50%, #F7F7F7 100%);
     position: relative;
     overflow: hidden;
 }
@@ -385,11 +475,12 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Visual */
+/* Hero Visual - Mejorado */
 .hero-visual {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .map-container {
@@ -398,7 +489,7 @@ body {
     height: 350px;
     border: 3px solid var(--primary-color);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    background: radial-gradient(circle, rgba(0, 56, 73, 0.05) 0%, rgba(147, 149, 211, 0.03) 100%);
     animation: pulse 3s ease-in-out infinite;
     overflow: hidden;
 }
@@ -410,38 +501,123 @@ body {
     right: -20px;
     bottom: -20px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 56, 73, 0.2) 0%, transparent 70%);
     animation: glow 4s ease-in-out infinite;
-}
-
-@keyframes glow {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.05); }
 }
 
 .map-point {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     animation: blink 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 10px rgba(0, 56, 73, 0.3);
+    border: 2px solid white;
 }
 
-.map-point:nth-child(1) { background: var(--emerald); animation-delay: 0s; }
-.map-point:nth-child(2) { background: var(--orange); animation-delay: 0.7s; }
-.map-point:nth-child(3) { background: var(--rose); animation-delay: 1.4s; }
+/* Más puntos de mapa con diferentes colores y posiciones */
+.map-point:nth-child(1) { 
+    background: var(--pistachio); 
+    animation-delay: 0s; 
+    top: 25%; 
+    left: 30%;
+    width: 14px;
+    height: 14px;
+}
 
+.map-point:nth-child(2) { 
+    background: var(--chili-red); 
+    animation-delay: 0.7s; 
+    top: 60%; 
+    left: 70%;
+    width: 10px;
+    height: 10px;
+}
+
+.map-point:nth-child(3) { 
+    background: var(--pink); 
+    animation-delay: 1.4s; 
+    top: 45%; 
+    left: 20%;
+    width: 16px;
+    height: 16px;
+}
+
+.map-point:nth-child(4) { 
+    background: var(--accent-color); 
+    animation-delay: 2.1s; 
+    top: 30%; 
+    left: 65%;
+    width: 12px;
+    height: 12px;
+}
+
+.map-point:nth-child(5) { 
+    background: var(--secondary-color); 
+    animation-delay: 2.8s; 
+    top: 70%; 
+    left: 45%;
+    width: 18px;
+    height: 18px;
+}
+
+/* Líneas de conexión entre puntos */
 .map-line {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 3px;
-    height: 120px;
-    background: var(--gradient-primary);
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(45deg, var(--accent-color), var(--pistachio));
     transform: translate(-50%, -50%) rotate(45deg);
-    opacity: 0.6;
+    opacity: 0.4;
     animation: rotate 8s linear infinite;
+}
+
+.map-line:nth-child(even) {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    height: 80px;
+    animation-direction: reverse;
+    animation-duration: 10s;
+}
+
+/* Elementos de datos geográficos */
+.geo-data {
+    position: absolute;
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 500;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+.geo-data:nth-child(7) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.geo-data:nth-child(8) {
+    top: 15%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.geo-data:nth-child(9) {
+    bottom: 10%;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+.geo-data:nth-child(10) {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+@keyframes glow {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.05); }
 }
 
 @keyframes rotate {
@@ -450,13 +626,13 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
-    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(37, 99, 235, 0.5); }
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 56, 73, 0.2); }
+    50% { transform: scale(1.02); box-shadow: 0 0 30px rgba(0, 56, 73, 0.3); }
 }
 
 @keyframes blink {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
+    50% { opacity: 0.7; transform: scale(1.1); }
 }
 
 /* Section Decorations */

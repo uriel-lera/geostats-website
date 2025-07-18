@@ -1,27 +1,32 @@
-<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
-  <!-- Fondo del logo -->
-  <rect width="120" height="60" rx="8" fill="#003849"/>
+<svg width="140" height="40" viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Texto GEO con estilo moderno -->
+  <text x="8" y="26" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="20" fill="#003849">GE</text>
   
-  <!-- Texto GEO -->
-  <text x="12" y="32" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#FBE07B">GEO</text>
-  
-  <!-- Gráfico de ondas/estadísticas dentro de la O -->
-  <g transform="translate(56, 18)">
-    <circle cx="9" cy="9" r="12" fill="none" stroke="#FBE07B" stroke-width="2"/>
-    <path d="M3,12 Q6,8 9,12 T15,12" fill="none" stroke="#88D18A" stroke-width="2"/>
-    <path d="M3,10 Q6,6 9,10 T15,10" fill="none" stroke="#9395D3" stroke-width="1.5"/>
+  <!-- O con gráfico integrado -->
+  <g transform="translate(42, 8)">
+    <circle cx="12" cy="12" r="11" fill="#003849"/>
+    <circle cx="12" cy="12" r="8" fill="#FBE07B"/>
+    <!-- Ondas estadísticas -->
+    <path d="M6,14 Q9,10 12,14 T18,14" fill="none" stroke="#003849" stroke-width="1.5"/>
+    <path d="M6,12 Q9,8 12,12 T18,12" fill="none" stroke="#9395D3" stroke-width="1"/>
+    <path d="M6,10 Q9,6 12,10 T18,10" fill="none" stroke="#88D18A" stroke-width="1"/>
   </g>
   
-  <!-- Corchetes para STATS -->
-  <text x="12" y="50" font-family="Arial, sans-serif" font-weight="normal" font-size="12" fill="#9395D3">[</text>
-  <text x="20" y="50" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#F8F8F8">STATS</text>
-  <text x="58" y="50" font-family="Arial, sans-serif" font-weight="normal" font-size="12" fill="#9395D3">]</text>
+  <!-- Texto STATS con corchetes -->
+  <text x="8" y="38" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="10" fill="#9395D3">[</text>
+  <text x="14" y="38" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="10" fill="#331832" letter-spacing="1px">STATS</text>
+  <text x="52" y="38" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="10" fill="#9395D3">]</text>
   
-  <!-- Elementos decorativos de mapas -->
-  <circle cx="85" cy="15" r="2" fill="#88D18A"/>
-  <circle cx="95" cy="25" r="2" fill="#D74833"/>
-  <circle cx="105" cy="35" r="2" fill="#B8336A"/>
+  <!-- Elementos decorativos de datos -->
+  <circle cx="75" cy="12" r="2" fill="#88D18A"/>
+  <circle cx="85" cy="8" r="1.5" fill="#D74833"/>
+  <circle cx="95" cy="16" r="2.5" fill="#B8336A"/>
+  <circle cx="105" cy="10" r="1.8" fill="#9395D3"/>
   
-  <!-- Líneas conectoras sutiles -->
-  <path d="M85,15 L95,25 L105,35" stroke="#9395D3" stroke-width="1" opacity="0.5" fill="none"/>
+  <!-- Líneas de conexión de datos -->
+  <path d="M75,12 L85,8 L95,16 L105,10" stroke="#9395D3" stroke-width="0.8" opacity="0.6" fill="none"/>
+  
+  <!-- Texto descriptivo -->
+  <text x="70" y="26" font-family="Inter, Arial, sans-serif" font-weight="300" font-size="8" fill="#6B7280">Cartografía</text>
+  <text x="70" y="34" font-family="Inter, Arial, sans-serif" font-weight="300" font-size="8" fill="#6B7280">Social</text>
 </svg> 
