@@ -859,13 +859,17 @@ function enhanceSocialIcons() {
             icon.style.transform = 'translateY(0) scale(1) rotate(0deg)';
         });
         
-        // Add click animation
+        // Add click animation (sin preventDefault para permitir navegación)
         icon.addEventListener('click', (e) => {
-            e.preventDefault();
+            // Animación de click sin prevenir la navegación
             icon.style.transform = 'scale(0.9)';
             setTimeout(() => {
                 icon.style.transform = 'scale(1)';
             }, 150);
+            
+            // Mensaje opcional de confirmación
+            const platform = icon.title || 'red social';
+            console.log(`Redirigiendo a ${platform}...`);
         });
     });
 }
