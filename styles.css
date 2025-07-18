@@ -6,51 +6,48 @@
 }
 
 :root {
-    /* Primary Colors */
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
+    /* Colores Oficiales GeoStats */
+    --primary-color: #003849;           /* Azul Principal */
+    --secondary-color: #FBE07B;         /* Amarillo Principal */
+    --accent-color: #9395D3;            /* Indigo */
+    --dark-purple: #331832;             /* Dark Purple */
+    --chili-red: #D74833;               /* Rojo Chili */
+    --pink: #B8336A;                    /* Rosa */
+    --pistachio: #88D18A;               /* Pistacho */
     
-    /* Extended Color Palette */
-    --emerald: #10b981;
-    --purple: #8b5cf6;
-    --orange: #f59e0b;
-    --rose: #ef4444;
-    --amber: #f59e0b;
-    --teal: #14b8a6;
-    --indigo: #6366f1;
-    --pink: #ec4899;
-    --cyan: #06b6d4;
-    --lime: #84cc16;
+    /* Neutros */
+    --black-secondary: #1E1E1E;         /* Negro Secundario */
+    --white-secondary: #F8F8F8;         /* Blanco Secundario */
+    --pure-white: #FFFFFF;              /* Blanco Puro */
     
-    /* Text Colors */
-    --text-primary: #ffffff;
-    --text-secondary: #e5e7eb;
-    --text-muted: #9ca3af;
-    --text-accent: #fbbf24;
+    /* Colores de Texto para Fondo Claro */
+    --text-primary: #1E1E1E;            /* Negro para títulos */
+    --text-secondary: #003849;          /* Azul para subtítulos */
+    --text-muted: #6B7280;              /* Gris para texto secundario */
+    --text-accent: #003849;             /* Azul para acentos */
     
-    /* Background Colors */
-    --background: #0f172a;
-    --background-secondary: #1e293b;
-    --surface: #334155;
-    --surface-light: #475569;
-    --border: #475569;
+    /* Backgrounds */
+    --background: #FFFFFF;              /* Fondo principal blanco */
+    --background-secondary: #F8F8F8;    /* Fondo secundario claro */
+    --surface: #FFFFFF;                 /* Superficies blancas */
+    --surface-light: #F8F8F8;           /* Superficies claras */
+    --border: #E5E7EB;                  /* Bordes suaves */
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-    --gradient-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    --gradient-warm: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    --gradient-cool: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
-    --gradient-rainbow: linear-gradient(135deg, #2563eb 0%, #10b981 25%, #f59e0b 50%, #ef4444 75%, #8b5cf6 100%);
+    /* Gradientes Renovados */
+    --gradient-primary: linear-gradient(135deg, #003849 0%, #331832 100%);
+    --gradient-secondary: linear-gradient(135deg, #FBE07B 0%, #88D18A 100%);
+    --gradient-accent: linear-gradient(135deg, #9395D3 0%, #B8336A 100%);
+    --gradient-warm: linear-gradient(135deg, #D74833 0%, #B8336A 100%);
+    --gradient-cool: linear-gradient(135deg, #003849 0%, #9395D3 100%);
+    --gradient-rainbow: linear-gradient(135deg, #003849 0%, #9395D3 25%, #FBE07B 50%, #88D18A 75%, #D74833 100%);
     
-    /* Shadows */
+    /* Sombras para Fondo Claro */
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    --shadow-colored: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+    --shadow-colored: 0 10px 15px -3px rgba(0, 56, 73, 0.2);
     
-    /* Animations */
+    /* Animaciones */
     --transition: all 0.3s ease;
     --transition-slow: all 0.6s ease;
 }
@@ -95,35 +92,35 @@ body {
     top: 20%;
     left: 20%;
     animation-delay: 0s;
-    background: var(--emerald);
+    background: var(--primary-color);
 }
 
 .particle:nth-child(2) {
     top: 60%;
     left: 80%;
     animation-delay: 2s;
-    background: var(--purple);
+    background: var(--accent-color);
 }
 
 .particle:nth-child(3) {
     top: 80%;
     left: 30%;
     animation-delay: 4s;
-    background: var(--orange);
+    background: var(--secondary-color);
 }
 
 .particle:nth-child(4) {
     top: 40%;
     left: 70%;
     animation-delay: 1s;
-    background: var(--rose);
+    background: var(--chili-red);
 }
 
 .particle:nth-child(5) {
     top: 10%;
     left: 60%;
     animation-delay: 3s;
-    background: var(--cyan);
+    background: var(--pistachio);
 }
 
 @keyframes float {
@@ -137,11 +134,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
-    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+    border-bottom: 1px solid rgba(0, 56, 73, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .nav-container {
@@ -177,7 +175,7 @@ body {
 }
 
 .nav-link {
-    color: var(--text-secondary);
+    color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
@@ -224,7 +222,7 @@ body {
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: linear-gradient(135deg, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%);
     position: relative;
     overflow: hidden;
 }
@@ -236,8 +234,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0, 56, 73, 0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.6;
 }
 
 .hero-bg-elements {
@@ -1217,8 +1215,8 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--purple);
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 56, 73, 0.1);
 }
 
 .form-group textarea {

@@ -182,11 +182,11 @@ navLinks.forEach(link => {
 // Navbar Scroll Effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 56, 73, 0.1)';
     } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
     }
 });
 
@@ -273,13 +273,13 @@ function showNotification(message, type) {
     let icon, bgColor;
     if (type === 'success') {
         icon = 'fa-check-circle';
-        bgColor = 'var(--emerald)';
+        bgColor = 'var(--pistachio)';
     } else if (type === 'info') {
         icon = 'fa-info-circle';
         bgColor = 'var(--primary-color)';
     } else {
         icon = 'fa-exclamation-circle';
-        bgColor = 'var(--rose)';
+        bgColor = 'var(--chili-red)';
     }
     
     notification.innerHTML = `
