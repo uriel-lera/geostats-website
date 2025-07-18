@@ -12,17 +12,6 @@ Democratizar el acceso a la información mediante el uso de cartografía social 
 ###  Visión
 Consolidarnos como líder local en generación y análisis de datos geo-estadísticos que conduzcan a los líderes sociales a implementar soluciones disruptivas y auténticas para mejorar nuestro entorno.
 
-##  Galería de Imágenes
-
-La galería del sitio web ya está configurada para mostrar las imágenes que tienes en tu carpeta `assets/images/`. Las imágenes se muestran automáticamente en el carrusel interactivo.
-
-### Imágenes actuales en la galería:
-- `WhatsApp Image 2025-01-29 at 7.27.43 PM.jpeg` - Ceremonia de entrega de reconocimientos
-- `52964647761_e732d49b73_k.jpg` - Taller de mapeo comunitario
-- `52315482293_19f4134f21_c.jpg` - Trabajo en LABNL
-- `51725504048_400908dbee_c.jpg` - Análisis colaborativo
-- `54187730281_f6800d6054_o.jpg` - Presentación de resultados
-- `53376756209_bcc846db36_o (1).jpg` - Proyecto comunitario
 
 ##  Proyecto
 
@@ -42,7 +31,6 @@ Sitio: https://uriel-lera.github.io/geostats-website
 ##  Estructura del Sitio Web
 
 ###  Inicio
-- Presentación principal con slogan actualizado
 - Llamadas a la acción para proyectos y colaboración
 
 ### ¿Quiénes Somos?
@@ -74,13 +62,9 @@ Sitio: https://uriel-lera.github.io/geostats-website
 - **Talleres**: Cartografía social comunitaria con 25 participantes
 - **Reconocimientos**: Ceremonia para socios formadores
 - **Proyectos**: Lanzamiento del proyecto Agua NL
-- **Newsletter**: Suscripción a boletín informativo
-
+- 
 ###  Galería
 - Carousel interactivo con auto-scroll
-- 6 imágenes de actividades y eventos reales
-- Navegación táctil y por teclado
-- Imágenes de alta calidad de eventos de GeoStats
 
 ###  Contacto
 - **Email**: geostats.labnl@gmail.com, hola@geostatsmty.com
@@ -97,8 +81,8 @@ Sitio: https://uriel-lera.github.io/geostats-website
 - **Diseño responsive** optimizado para todos los dispositivos
 
 ###  Funcionalidades
-- **Galería interactiva** con auto-scroll cada 3 segundos
-- **Navegación por teclado** (flechas para el carrusel)
+- **Galería interactiva** con auto-scroll 
+- **Navegación por teclado** 
 - **Soporte táctil** para dispositivos móviles
 - **Formulario inteligente** con validación y mensajes personalizados
 - **Animaciones de scroll** con intersection observers
@@ -121,13 +105,6 @@ El sitio está optimizado para:
 -  **Escritorio** (1024px+)
 -  **Pantallas grandes** (1200px+)
 
-##  Equipos de Trabajo
-
-¿Quieres unirte? Tenemos espacio en:
--  **Realización de mapas**
--  **Marketing**
--  **Diseño web**
--  **Análisis de datos**
 
 ##  Ubicación
 
