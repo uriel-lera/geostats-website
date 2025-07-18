@@ -6,7 +6,7 @@
 }
 
 :root {
-    /* Colores Oficiales GeoStats */
+    /* Colores Oficiales GeoStats - Tema Oscuro Original */
     --primary-color: #003849;           /* Azul Principal */
     --secondary-color: #FBE07B;         /* Amarillo Principal */
     --accent-color: #9395D3;            /* Indigo */
@@ -20,20 +20,20 @@
     --white-secondary: #F8F8F8;         /* Blanco Secundario */
     --pure-white: #FFFFFF;              /* Blanco Puro */
     
-    /* Colores de Texto para Fondo Claro */
-    --text-primary: #1E1E1E;            /* Negro para títulos */
-    --text-secondary: #003849;          /* Azul para subtítulos */
-    --text-muted: #6B7280;              /* Gris para texto secundario */
-    --text-accent: #003849;             /* Azul para acentos */
+    /* Colores de Texto para Tema Oscuro */
+    --text-primary: #FFFFFF;            /* Blanco para títulos */
+    --text-secondary: #E2E8F0;          /* Gris claro para texto secundario */
+    --text-muted: #94A3B8;              /* Gris medio para texto auxiliar */
+    --text-accent: #FBE07B;             /* Amarillo para acentos */
     
-    /* Backgrounds Mejorados */
-    --background: #FEFEFE;              /* Fondo principal blanco hueso */
-    --background-secondary: #F5F5F5;    /* Fondo secundario gris muy claro */
-    --surface: #FAFAFA;                 /* Superficies blanco hueso */
-    --surface-light: #F7F7F7;           /* Superficies claras */
-    --border: #E0E4E7;                  /* Bordes más definidos */
+    /* Backgrounds - Tema Oscuro Azul */
+    --background: #1A202C;              /* Fondo principal azul oscuro */
+    --background-secondary: #2D3748;    /* Fondo secundario azul gris */
+    --surface: #374151;                 /* Superficies grises azuladas */
+    --surface-light: #4A5568;           /* Superficies claras */
+    --border: #4A5568;                  /* Bordes */
     
-    /* Gradientes Renovados */
+    /* Gradientes Arcoíris Vibrantes */
     --gradient-primary: linear-gradient(135deg, #003849 0%, #331832 100%);
     --gradient-secondary: linear-gradient(135deg, #FBE07B 0%, #88D18A 100%);
     --gradient-accent: linear-gradient(135deg, #9395D3 0%, #B8336A 100%);
@@ -41,11 +41,11 @@
     --gradient-cool: linear-gradient(135deg, #003849 0%, #9395D3 100%);
     --gradient-rainbow: linear-gradient(135deg, #003849 0%, #9395D3 25%, #FBE07B 50%, #88D18A 75%, #D74833 100%);
     
-    /* Sombras para Fondo Claro */
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    --shadow-colored: 0 10px 15px -3px rgba(0, 56, 73, 0.2);
+    /* Sombras para Tema Oscuro */
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    --shadow-colored: 0 10px 15px -3px rgba(147, 149, 211, 0.3);
     
     /* Animaciones */
     --transition: all 0.3s ease;
@@ -208,17 +208,17 @@ body {
     66% { transform: translateY(5px) rotate(240deg); }
 }
 
-/* Navigation */
+/* Navigation - Tema Oscuro Original */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(254, 254, 254, 0.95);
+    background: rgba(26, 32, 44, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
-    border-bottom: 1px solid rgba(0, 56, 73, 0.1);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(147, 149, 211, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -236,12 +236,12 @@ body {
     gap: 0.8rem;
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 .nav-logo img {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .nav-logo span {
@@ -253,19 +253,15 @@ body {
     font-weight: 800;
 }
 
-.nav-logo i {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-link {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
@@ -274,7 +270,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .nav-link::after {
@@ -284,7 +280,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: var(--gradient-rainbow);
     transition: width 0.3s ease;
 }
 
@@ -306,13 +302,13 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Hero Section - Tema Oscuro */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(135deg, #F5F5F5 0%, #FEFEFE 50%, #F7F7F7 100%);
+    background: linear-gradient(135deg, #1A202C 0%, #2D3748 50%, #374151 100%);
     position: relative;
     overflow: hidden;
 }
@@ -324,7 +320,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0, 56, 73, 0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(147, 149, 211, 0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
     opacity: 0.6;
 }
 
@@ -394,6 +390,7 @@ body {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
 }
 
 .highlight {
@@ -475,7 +472,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Visual - Mejorado */
+/* Hero Visual - NUEVO DISEÑO DE SATELITE/MAPA AEREO */
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -485,154 +482,273 @@ body {
 
 .map-container {
     position: relative;
-    width: 350px;
-    height: 350px;
-    border: 3px solid var(--primary-color);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at center, 
+        rgba(0, 56, 73, 0.1) 0%, 
+        rgba(147, 149, 211, 0.05) 30%, 
+        rgba(251, 224, 123, 0.03) 60%, 
+        transparent 100%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 56, 73, 0.05) 0%, rgba(147, 149, 211, 0.03) 100%);
-    animation: pulse 3s ease-in-out infinite;
     overflow: hidden;
+    animation: satelliteOrbit 20s linear infinite;
+    border: 2px solid rgba(0, 56, 73, 0.2);
 }
 
-.map-glow {
+/* Imagen satelital de fondo */
+.map-container::before {
+    content: '';
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, 
+        rgba(136, 209, 138, 0.3) 0%, 
+        rgba(251, 224, 123, 0.3) 25%, 
+        rgba(147, 149, 211, 0.3) 50%, 
+        rgba(215, 72, 51, 0.3) 75%, 
+        rgba(184, 51, 106, 0.3) 100%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 56, 73, 0.2) 0%, transparent 70%);
-    animation: glow 4s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+    animation: terrainRotate 30s linear infinite reverse;
 }
 
+/* Cuadrícula de coordenadas */
+.map-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(0deg, 
+            transparent, 
+            transparent 38px, 
+            rgba(0, 56, 73, 0.1) 39px, 
+            rgba(0, 56, 73, 0.1) 40px),
+        repeating-linear-gradient(90deg, 
+            transparent, 
+            transparent 38px, 
+            rgba(0, 56, 73, 0.1) 39px, 
+            rgba(0, 56, 73, 0.1) 40px);
+    border-radius: 50%;
+    animation: gridScan 8s ease-in-out infinite;
+}
+
+/* Puntos de datos GPS mejorados */
 .map-point {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    animation: blink 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(0, 56, 73, 0.3);
+    animation: gpsPulse 2s ease-in-out infinite;
     border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 56, 73, 0.5);
+    z-index: 3;
 }
 
-/* Más puntos de mapa con diferentes colores y posiciones */
+.map-point::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid rgba(0, 56, 73, 0.3);
+    border-radius: 50%;
+    animation: radarPing 3s ease-out infinite;
+}
+
+/* Coordenadas específicas para los puntos GPS */
 .map-point:nth-child(1) { 
     background: var(--pistachio); 
-    animation-delay: 0s; 
-    top: 25%; 
+    top: 20%; 
     left: 30%;
-    width: 14px;
-    height: 14px;
+    animation-delay: 0s;
 }
 
 .map-point:nth-child(2) { 
     background: var(--chili-red); 
-    animation-delay: 0.7s; 
-    top: 60%; 
-    left: 70%;
-    width: 10px;
-    height: 10px;
+    top: 65%; 
+    right: 25%;
+    animation-delay: 0.5s;
 }
 
 .map-point:nth-child(3) { 
     background: var(--pink); 
-    animation-delay: 1.4s; 
-    top: 45%; 
-    left: 20%;
-    width: 16px;
-    height: 16px;
+    top: 40%; 
+    left: 15%;
+    animation-delay: 1s;
 }
 
 .map-point:nth-child(4) { 
     background: var(--accent-color); 
-    animation-delay: 2.1s; 
-    top: 30%; 
-    left: 65%;
-    width: 12px;
-    height: 12px;
+    top: 75%; 
+    left: 60%;
+    animation-delay: 1.5s;
 }
 
 .map-point:nth-child(5) { 
     background: var(--secondary-color); 
-    animation-delay: 2.8s; 
-    top: 70%; 
-    left: 45%;
-    width: 18px;
-    height: 18px;
+    top: 25%; 
+    right: 20%;
+    animation-delay: 2s;
 }
 
-/* Líneas de conexión entre puntos */
+/* Líneas de conexión de datos - como rutas aéreas */
 .map-line {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 100px;
-    background: linear-gradient(45deg, var(--accent-color), var(--pistachio));
-    transform: translate(-50%, -50%) rotate(45deg);
-    opacity: 0.4;
-    animation: rotate 8s linear infinite;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(0, 56, 73, 0.4) 20%, 
+        rgba(147, 149, 211, 0.6) 50%, 
+        rgba(0, 56, 73, 0.4) 80%, 
+        transparent 100%);
+    height: 1px;
+    animation: dataFlow 4s ease-in-out infinite;
+    z-index: 2;
 }
 
-.map-line:nth-child(even) {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    height: 80px;
-    animation-direction: reverse;
-    animation-duration: 10s;
+.map-line:nth-child(6) {
+    top: 22%;
+    left: 32%;
+    width: 120px;
+    transform: rotate(45deg);
+    animation-delay: 0s;
 }
 
-/* Elementos de datos geográficos */
+.map-line:nth-child(7) {
+    top: 42%;
+    left: 17%;
+    width: 100px;
+    transform: rotate(-30deg);
+    animation-delay: 2s;
+}
+
+/* Elementos de datos geográficos - coordenadas */
 .geo-data {
     position: absolute;
     font-size: 10px;
-    color: var(--text-muted);
-    font-weight: 500;
-    opacity: 0.6;
-    animation: float 6s ease-in-out infinite;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    opacity: 0.7;
+    animation: coordinateUpdate 6s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 56, 73, 0.2);
+    z-index: 4;
 }
 
-.geo-data:nth-child(7) {
-    top: 10%;
+.geo-data:nth-child(8) {
+    top: 5%;
     left: 10%;
     animation-delay: 0s;
 }
 
-.geo-data:nth-child(8) {
-    top: 15%;
-    right: 10%;
-    animation-delay: 2s;
-}
-
 .geo-data:nth-child(9) {
-    bottom: 10%;
-    left: 15%;
-    animation-delay: 4s;
+    top: 10%;
+    right: 5%;
+    animation-delay: 1.5s;
 }
 
 .geo-data:nth-child(10) {
-    bottom: 15%;
-    right: 15%;
-    animation-delay: 1s;
+    bottom: 5%;
+    left: 15%;
+    animation-delay: 3s;
 }
 
-@keyframes glow {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(1.05); }
+.geo-data:nth-child(11) {
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 4.5s;
 }
 
-@keyframes rotate {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
+/* Halo exterior del mapa */
+.map-glow {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(0, 56, 73, 0.1) 0%, 
+        rgba(147, 149, 211, 0.05) 40%, 
+        transparent 70%);
+    animation: satelliteGlow 6s ease-in-out infinite;
+    z-index: 1;
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 56, 73, 0.2); }
-    50% { transform: scale(1.02); box-shadow: 0 0 30px rgba(0, 56, 73, 0.3); }
+/* Animaciones específicas para el diseño satelital */
+@keyframes satelliteOrbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.1); }
+@keyframes terrainRotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes gridScan {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes gpsPulse {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1); 
+        box-shadow: 0 0 10px rgba(0, 56, 73, 0.5);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.2); 
+        box-shadow: 0 0 20px rgba(0, 56, 73, 0.8);
+    }
+}
+
+@keyframes radarPing {
+    0% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: scale(3); 
+    }
+}
+
+@keyframes dataFlow {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.3; }
+}
+
+@keyframes coordinateUpdate {
+    0%, 100% { 
+        opacity: 0.7; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.05); 
+    }
+}
+
+@keyframes satelliteGlow {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.5; 
+        transform: scale(1.02); 
+    }
 }
 
 /* Section Decorations */
@@ -677,6 +793,7 @@ body {
     margin-bottom: 3rem;
     font-family: 'Playfair Display', serif;
     position: relative;
+    color: var(--text-primary);
 }
 
 .title-accent {
@@ -700,7 +817,7 @@ body {
     border-radius: 2px;
 }
 
-/* About Section */
+/* About Section - Tema Oscuro */
 .about {
     padding: 6rem 0;
     background: var(--background-secondary);
@@ -779,11 +896,11 @@ body {
 .value-item:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--emerald);
+    border-color: var(--pistachio);
 }
 
 .value-item i {
-    color: var(--emerald);
+    color: var(--pistachio);
     font-size: 1.3rem;
 }
 
@@ -880,10 +997,10 @@ body {
     font-weight: 500;
 }
 
-/* Projects Section */
+/* Projects Section - Tema Oscuro */
 .projects {
     padding: 6rem 0;
-    background: var(--background);
+    background: var(--background-secondary);
 }
 
 .projects-grid {
@@ -926,7 +1043,7 @@ body {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 .project-icon {
@@ -974,37 +1091,37 @@ body {
 }
 
 .tag {
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(0, 56, 73, 0.1);
     color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(0, 56, 73, 0.2);
 }
 
 .project-card:nth-child(2) .tag {
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--emerald);
-    border-color: rgba(16, 185, 129, 0.2);
+    background: rgba(136, 209, 138, 0.1);
+    color: var(--pistachio);
+    border-color: rgba(136, 209, 138, 0.2);
 }
 
 .project-card:nth-child(3) .tag {
-    background: rgba(139, 92, 246, 0.1);
-    color: var(--purple);
-    border-color: rgba(139, 92, 246, 0.2);
+    background: rgba(147, 149, 211, 0.1);
+    color: var(--accent-color);
+    border-color: rgba(147, 149, 211, 0.2);
 }
 
 .project-card:nth-child(4) .tag {
-    background: rgba(245, 158, 11, 0.1);
-    color: var(--orange);
-    border-color: rgba(245, 158, 11, 0.2);
+    background: rgba(215, 72, 51, 0.1);
+    color: var(--chili-red);
+    border-color: rgba(215, 72, 51, 0.2);
 }
 
-/* Services Section */
+/* Services Section - Tema Oscuro */
 .services {
     padding: 6rem 0;
-    background: var(--background-secondary);
+    background: var(--background);
 }
 
 .services-content {
@@ -1059,18 +1176,18 @@ body {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     padding: 0.75rem;
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(136, 209, 138, 0.05);
     border-radius: 0.5rem;
     transition: var(--transition);
 }
 
 .service-features li:hover {
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(136, 209, 138, 0.1);
     transform: translateX(5px);
 }
 
 .service-features i {
-    color: var(--emerald);
+    color: var(--pistachio);
     font-size: 1.2rem;
 }
 
@@ -1109,17 +1226,17 @@ body {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     padding: 0.75rem;
-    background: rgba(245, 158, 11, 0.05);
+    background: rgba(215, 72, 51, 0.05);
     border-radius: 0.5rem;
 }
 
 .schedule-item i, .schedule-location i {
-    color: var(--orange);
+    color: var(--chili-red);
     font-size: 1.2rem;
     width: 20px;
 }
 
-/* Gallery Section */
+/* Gallery Section - Tema Oscuro */
 .gallery {
     padding: 6rem 0;
     background: var(--background);
@@ -1257,21 +1374,21 @@ body {
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(147, 149, 211, 0.3);
     cursor: pointer;
     transition: var(--transition);
 }
 
 .indicator.active {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     transform: scale(1.2);
 }
 
 .indicator:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
-/* Contact Section */
+/* Contact Section - Tema Oscuro */
 .contact {
     padding: 6rem 0;
     background: var(--background-secondary);
@@ -1329,18 +1446,18 @@ body {
     gap: 1rem;
     color: var(--text-secondary);
     padding: 1rem;
-    background: rgba(139, 92, 246, 0.05);
+    background: rgba(147, 149, 211, 0.05);
     border-radius: 0.75rem;
     transition: var(--transition);
 }
 
 .contact-method:hover {
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(147, 149, 211, 0.1);
     transform: translateX(5px);
 }
 
 .contact-method i {
-    color: var(--purple);
+    color: var(--accent-color);
     font-size: 1.3rem;
     width: 20px;
 }
@@ -1377,7 +1494,8 @@ body {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 0.875rem;
     border: 1px solid var(--border);
@@ -1389,10 +1507,11 @@ body {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 56, 73, 0.1);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(251, 224, 123, 0.2);
 }
 
 .form-group textarea {
@@ -1400,7 +1519,17 @@ body {
     min-height: 120px;
 }
 
-/* Footer */
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: var(--background);
+    color: var(--text-primary);
+    padding: 0.5rem;
+}
+
+/* Footer - Tema Oscuro */
 .footer {
     background: var(--surface);
     padding: 3rem 0 1rem;
@@ -1472,7 +1601,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: var(--emerald);
+    color: var(--pistachio);
     transform: translateX(5px);
 }
 
@@ -1568,13 +1697,13 @@ html {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(136, 209, 138, 0.05);
     border-radius: 0.75rem;
     transition: var(--transition);
 }
 
 .timeline-item:hover {
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(136, 209, 138, 0.1);
     transform: translateX(5px);
 }
 
@@ -1714,16 +1843,16 @@ html {
 }
 
 .join-options li:hover {
-    background: rgba(245, 158, 11, 0.1);
+    background: rgba(215, 72, 51, 0.1);
     transform: translateX(5px);
 }
 
 .join-options i {
-    color: var(--orange);
+    color: var(--chili-red);
     font-size: 1.1rem;
 }
 
-/* Collaborations Section */
+/* Collaborations Section - Tema Oscuro */
 .collaborations {
     padding: 6rem 0;
     background: var(--background);
@@ -1771,7 +1900,7 @@ html {
 .collaboration-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--emerald);
+    border-color: var(--pistachio);
 }
 
 .collaboration-icon {
@@ -1823,16 +1952,16 @@ html {
 }
 
 .collaboration-details {
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(136, 209, 138, 0.05);
     padding: 1.5rem;
     border-radius: 0.75rem;
-    border: 1px solid rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(136, 209, 138, 0.1);
 }
 
 .collaboration-details h4 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: var(--emerald);
+    color: var(--pistachio);
 }
 
 .collaboration-details ul {
@@ -1849,7 +1978,7 @@ html {
 
 .collaboration-details li::before {
     content: '•';
-    color: var(--emerald);
+    color: var(--pistachio);
     font-weight: bold;
 }
 
@@ -1912,10 +2041,10 @@ html {
     margin-right: auto;
 }
 
-/* News Section */
+/* News Section - Tema Oscuro */
 .news {
     padding: 6rem 0;
-    background: var(--background);
+    background: var(--background-secondary);
     position: relative;
 }
 
@@ -1938,7 +2067,7 @@ html {
 .news-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 .news-card.featured {
@@ -1999,7 +2128,7 @@ html {
 
 .news-category {
     display: inline-block;
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(0, 56, 73, 0.1);
     color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
@@ -2008,7 +2137,7 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(0, 56, 73, 0.2);
 }
 
 .news-content h3 {
@@ -2117,7 +2246,7 @@ html {
 
 .newsletter-form .btn {
     background: white;
-    color: var(--emerald);
+    color: var(--pistachio);
     border: none;
     white-space: nowrap;
 }
@@ -2125,31 +2254,6 @@ html {
 .newsletter-form .btn:hover {
     background: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
-}
-
-/* Form Select Styles */
-.form-group select {
-    width: 100%;
-    padding: 0.875rem;
-    border: 1px solid var(--border);
-    border-radius: 0.5rem;
-    background: var(--background);
-    color: var(--text-primary);
-    font-family: inherit;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.form-group select:focus {
-    outline: none;
-    border-color: var(--purple);
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
-}
-
-.form-group select option {
-    background: var(--background);
-    color: var(--text-primary);
-    padding: 0.5rem;
 }
 
 /* Enhanced Responsive Design */
