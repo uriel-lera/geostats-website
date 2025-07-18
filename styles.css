@@ -33,13 +33,26 @@
     --surface-light: #4A5568;           /* Superficies claras */
     --border: #4A5568;                  /* Bordes */
     
-    /* Gradientes Arcoíris Vibrantes */
+    /* Gradientes Arcoíris VIBRANTES E INTENSOS */
     --gradient-primary: linear-gradient(135deg, #003849 0%, #331832 100%);
-    --gradient-secondary: linear-gradient(135deg, #FBE07B 0%, #88D18A 100%);
-    --gradient-accent: linear-gradient(135deg, #9395D3 0%, #B8336A 100%);
-    --gradient-warm: linear-gradient(135deg, #D74833 0%, #B8336A 100%);
-    --gradient-cool: linear-gradient(135deg, #003849 0%, #9395D3 100%);
-    --gradient-rainbow: linear-gradient(135deg, #003849 0%, #9395D3 25%, #FBE07B 50%, #88D18A 75%, #D74833 100%);
+    --gradient-secondary: linear-gradient(135deg, #FFD700 0%, #32CD32 100%);
+    --gradient-accent: linear-gradient(135deg, #8A2BE2 0%, #FF1493 100%);
+    --gradient-warm: linear-gradient(135deg, #FF4500 0%, #FF1493 100%);
+    --gradient-cool: linear-gradient(135deg, #003849 0%, #8A2BE2 100%);
+    --gradient-rainbow: linear-gradient(135deg, 
+        #FF0000 0%,     /* Rojo vibrante */
+        #FF8C00 14%,    /* Naranja intenso */
+        #FFD700 28%,    /* Amarillo brillante */
+        #32CD32 42%,    /* Verde lima vibrante */
+        #00BFFF 56%,    /* Azul cielo intenso */
+        #8A2BE2 70%,    /* Violeta vibrante */
+        #FF1493 84%,    /* Rosa fucsia */
+        #FF0000 100%);  /* Vuelta al rojo */
+    
+    /* Colores de Redes Sociales Oficiales */
+    --instagram-color: #E4405F;         /* Instagram oficial */
+    --facebook-color: #1877F2;          /* Facebook oficial */
+    --linkedin-color: #0A66C2;          /* LinkedIn oficial */
     
     /* Sombras para Tema Oscuro */
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
@@ -398,12 +411,23 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
+    background-size: 300% 300%;
+    animation: shimmer 2s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0% { 
+        background-position: 0% 50%; 
+        filter: brightness(1.2) saturate(1.5);
+    }
+    50% { 
+        background-position: 100% 50%; 
+        filter: brightness(1.5) saturate(2);
+    }
+    100% { 
+        background-position: 0% 50%; 
+        filter: brightness(1.2) saturate(1.5);
+    }
 }
 
 .hero-subtitle {
@@ -1101,21 +1125,21 @@ body {
 }
 
 .project-card:nth-child(2) .tag {
-    background: rgba(136, 209, 138, 0.1);
-    color: var(--pistachio);
-    border-color: rgba(136, 209, 138, 0.2);
+    background: rgba(50, 205, 50, 0.15);
+    color: #32CD32;
+    border-color: rgba(50, 205, 50, 0.3);
 }
 
 .project-card:nth-child(3) .tag {
-    background: rgba(147, 149, 211, 0.1);
-    color: var(--accent-color);
-    border-color: rgba(147, 149, 211, 0.2);
+    background: rgba(138, 43, 226, 0.15);
+    color: #8A2BE2;
+    border-color: rgba(138, 43, 226, 0.3);
 }
 
 .project-card:nth-child(4) .tag {
-    background: rgba(215, 72, 51, 0.1);
-    color: var(--chili-red);
-    border-color: rgba(215, 72, 51, 0.2);
+    background: rgba(255, 69, 0, 0.15);
+    color: #FF4500;
+    border-color: rgba(255, 69, 0, 0.3);
 }
 
 /* Services Section - Tema Oscuro */
@@ -1176,18 +1200,18 @@ body {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     padding: 0.75rem;
-    background: rgba(136, 209, 138, 0.05);
+    background: rgba(50, 205, 50, 0.08);
     border-radius: 0.5rem;
     transition: var(--transition);
 }
 
 .service-features li:hover {
-    background: rgba(136, 209, 138, 0.1);
+    background: rgba(50, 205, 50, 0.15);
     transform: translateX(5px);
 }
 
 .service-features i {
-    color: var(--pistachio);
+    color: #32CD32;
     font-size: 1.2rem;
 }
 
@@ -1697,13 +1721,13 @@ html {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: rgba(136, 209, 138, 0.05);
+    background: rgba(50, 205, 50, 0.08);
     border-radius: 0.75rem;
     transition: var(--transition);
 }
 
 .timeline-item:hover {
-    background: rgba(136, 209, 138, 0.1);
+    background: rgba(50, 205, 50, 0.15);
     transform: translateX(5px);
 }
 
@@ -1952,16 +1976,16 @@ html {
 }
 
 .collaboration-details {
-    background: rgba(136, 209, 138, 0.05);
+    background: rgba(50, 205, 50, 0.08);
     padding: 1.5rem;
     border-radius: 0.75rem;
-    border: 1px solid rgba(136, 209, 138, 0.1);
+    border: 1px solid rgba(50, 205, 50, 0.2);
 }
 
 .collaboration-details h4 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: var(--pistachio);
+    color: #32CD32;
 }
 
 .collaboration-details ul {
@@ -1978,7 +2002,7 @@ html {
 
 .collaboration-details li::before {
     content: '•';
-    color: var(--pistachio);
+    color: #32CD32;
     font-weight: bold;
 }
 
@@ -2013,12 +2037,19 @@ html {
     transition: var(--transition);
 }
 
-.social-icon:nth-child(2) {
-    background: var(--gradient-secondary);
+/* Instagram - Color oficial */
+.social-icon:nth-child(1) {
+    background: linear-gradient(45deg, var(--instagram-color) 0%, #F56040 50%, #FCAF45 100%);
 }
 
+/* Facebook - Color oficial */
+.social-icon:nth-child(2) {
+    background: var(--facebook-color);
+}
+
+/* LinkedIn - Color oficial */
 .social-icon:nth-child(3) {
-    background: var(--gradient-accent);
+    background: var(--linkedin-color);
 }
 
 .social-icon:hover {
