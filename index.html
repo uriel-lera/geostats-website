@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoStats - Generando diálogos con cartografía social</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating particles background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>GeoStats</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#quienes-somos" class="nav-link">¿Quiénes Somos?</a></li>
+                <li><a href="#que-hacemos" class="nav-link">¿Qué Hacemos?</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#colaboraciones" class="nav-link">Colaboraciones</a></li>
+                <li><a href="#noticias" class="nav-link">Noticias</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-bg-elements">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="highlight">Generando diálogos</span>
+                        <br>con cartografía social
+                    </h1>
+                    <p class="hero-subtitle">
+                        Somos una comunidad que democratiza el acceso a datos geoespaciales 
+                        y promueve la transparencia mediante cartografía social y análisis geoestadístico 
+                        en el estado de Nuevo León
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="btn btn-secondary">
+                            <i class="fas fa-users"></i>
+                            Únete a Nosotros
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="map-container">
+                        <div class="map-point" style="top: 20%; left: 30%;"></div>
+                        <div class="map-point" style="top: 60%; left: 70%;"></div>
+                        <div class="map-point" style="top: 40%; left: 50%;"></div>
+                        <div class="map-line"></div>
+                        <div class="map-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quienes-somos" class="about">
+            <div class="section-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-triangle"></div>
+            </div>
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">¿Quiénes</span> Somos?
+                </h2>
+                
+                <!-- Historia -->
+                <div class="history-section">
+                    <div class="history-content">
+                        <div class="history-text">
+                            <h3>Nuestra Historia</h3>
+                            <p class="about-description">
+                                GeoStats es una comunidad que nace en <strong>2021</strong> dentro del 
+                                <strong>Laboratorio Cultural Ciudadano LABNL</strong>, impulsada por el interés 
+                                de generar conocimiento colectivo mediante cartografía social y análisis geoestadístico.
+                            </p>
+                            <p class="about-description">
+                                Su primer promotor, <strong>Efrén Cuenca</strong>, propuso el proyecto en la 
+                                convocatoria inicial de Proyectos Ciudadanos de LABNL con la intención de 
+                                representar, mediante mapas, problemáticas sociales relevantes para el estado de Nuevo León.
+                            </p>
+                        </div>
+                        <div class="timeline-visual">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>2021</h4>
+                                    <p>Fundación de GeoStats en LABNL</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-map"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>2021-2022</h4>
+                                    <p>Primeros prototipos de cartografía</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>2023-2024</h4>
+                                    <p>Colaboraciones con organizaciones civiles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motivación -->
+                <div class="motivation-section">
+                    <div class="text-highlight-box">
+                        <h3>Nuestra Motivación</h3>
+                        <p class="about-description">
+                            GeoStats surge ante la necesidad de generar datos estadísticos útiles, 
+                            accesibles y contextualizados para el estado de Nuevo León. A diferencia 
+                            de las agencias nacionales como INEGI o CONEVAL, GeoStats se enfoca en 
+                            problemáticas locales, visibilizando fenómenos que a nivel federal suelen 
+                            pasar desapercibidos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Misión y Valores -->
+                <div class="mission-values-grid">
+                    <div class="mission-section">
+                        <h3>Misión</h3>
+                        <p class="about-description">
+                            Democratizar el acceso a la información mediante el uso de cartografía social 
+                            y análisis geoestadístico, promoviendo el diálogo ciudadano y la toma de 
+                            decisiones colaborativas para mejorar la calidad de vida de los habitantes 
+                            en ambientes urbanos y rurales.
+                        </p>
+                    </div>
+                    <div class="vision-section">
+                        <h3>Visión</h3>
+                        <p class="about-description">
+                            Consolidarnos como líder local en generación y análisis de datos geo-estadísticos 
+                            que conduzcan a los líderes sociales a implementar soluciones disruptivas y 
+                            auténticas para mejorar nuestro entorno.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="values">
+                    <h3>Nuestros Valores</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Transparencia</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Colaboración</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Respeto</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Diálogo</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovación</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-users"></i>
+                            <span>Creatividad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="stats-section">
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-number">2021</div>
+                            <div class="stat-label">Año de Fundación</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Prototipos Desarrollados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Colaboradores</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Servicios Gratuitos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="que-hacemos" class="services">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">¿Qué</span> Hacemos?
+                </h2>
+                <div class="services-content">
+                    <div class="service-main">
+                        <div class="service-icon-large">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Nuestro Enfoque</h3>
+                        <p>
+                            Trabajamos en total proximidad con la tecnología actual, siendo esta la herramienta 
+                            que nos permite generar y analizar mapas digitales así como conjuntos de datos 
+                            geo-estadísticos para visibilizar, dialogar y promover la implementación de 
+                            nuevas políticas públicas.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Generación de mapas digitales</li>
+                            <li><i class="fas fa-check"></i> Análisis geoestadístico</li>
+                            <li><i class="fas fa-check"></i> Cartografía social participativa</li>
+                            <li><i class="fas fa-check"></i> Visualización de datos sociales</li>
+                            <li><i class="fas fa-check"></i> Democratización de información</li>
+                            <li><i class="fas fa-check"></i> Promoción de políticas públicas</li>
+                        </ul>
+                    </div>
+                    <div class="service-schedule">
+                        <h3>Cómo Participar</h3>
+                        <div class="schedule-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Sábados: 15:00 - 18:00 hrs</span>
+                        </div>
+                        <div class="schedule-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>LABNL - Laboratorio Cultural Ciudadano<br>C. Washington 648, Centro, Monterrey, N.L.</span>
+                        </div>
+                        <div class="join-options">
+                            <h4>Únete a nuestros equipos:</h4>
+                            <ul>
+                                <li><i class="fas fa-map"></i> Realización de mapas</li>
+                                <li><i class="fas fa-bullhorn"></i> Marketing</li>
+                                <li><i class="fas fa-code"></i> Diseño web</li>
+                                <li><i class="fas fa-chart-bar"></i> Análisis de datos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Nuestros</span> Proyectos
+                </h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-smog"></i>
+                        </div>
+                        <h3>Contaminación ZMM</h3>
+                        <p>
+                            Primer prototipo que tuvo como propósito visibilizar el impacto de la industria 
+                            ZMM en la temperatura y su relación con la contaminación atmosférica. 
+                            Los datos están organizados en capas geoestadísticas contrastadas en QGis.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Medio Ambiente</span>
+                            <span class="tag">Salud Pública</span>
+                            <span class="tag">QGis</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Rastreo del Agua NL</h3>
+                        <p>
+                            En colaboración con DataLab LABNL, iniciativa ciudadana de visualización 
+                            de datos abiertos de los acuíferos de Nuevo León a través de cartografía social. 
+                            Prototipado desarrollado en LABNL Lab Cultural Ciudadano.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Recursos Hídricos</span>
+                            <span class="tag">DataLab</span>
+                            <span class="tag">Datos Abiertos</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Futuro con Derechos</h3>
+                        <p>
+                            Alianza como creadores y desarrolladores de mapa para la organización 
+                            Futuro con Derechos, enfocándose en el beneficio a NNA (Niñas, niños y adolescentes) 
+                            en estado de orfandad por el delito de feminicidio en Nuevo León.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Derechos Humanos</span>
+                            <span class="tag">NNA</span>
+                            <span class="tag">Justicia Social</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Red de Monitoreo Calidad del Aire</h3>
+                        <p>
+                            Colaboración con organizaciones civiles para desarrollar corredores verdes 
+                            en la zona norte y sur de la ZMM. Promovemos la creación de indicadores 
+                            y su medición para mejorar el proyecto del Municipio SPGG.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Calidad del Aire</span>
+                            <span class="tag">Corredores Verdes</span>
+                            <span class="tag">SPGG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="colaboraciones" class="collaborations">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Nuestras</span> Colaboraciones
+                </h2>
+                
+                <div class="collaborations-grid">
+                    <div class="collaboration-card featured">
+                        <div class="collaboration-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Movimiento Círculo Verde</h3>
+                        <p>
+                            Iniciativa colaborativa que une a ciudadanos, asociaciones civiles, gobiernos, 
+                            empresas y academias con el objetivo de regenerar las ciudades y fomentar 
+                            una convivencia armónica con el entorno natural.
+                        </p>
+                        <div class="collaboration-details">
+                            <h4>Nuestro rol:</h4>
+                            <ul>
+                                <li>Creación de indicadores ambientales</li>
+                                <li>Medición y seguimiento de datos</li>
+                                <li>Mapeo de corredores verdes</li>
+                                <li>Análisis de impacto ambiental</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="collaboration-card">
+                        <div class="collaboration-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>LABNL - Laboratorio Cultural Ciudadano</h3>
+                        <p>
+                            Espacio público de producción cultural abierta que favorece la innovación 
+                            ciudadana basada en la creatividad y la diversidad de saberes.
+                        </p>
+                    </div>
+                    
+                    <div class="collaboration-card">
+                        <div class="collaboration-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>TEC Campus Monterrey</h3>
+                        <p>
+                            Colaboración con la Dirección de Servicio Social del Tecnológico de Monterrey 
+                            para integrar estudiantes en proyectos de cartografía social.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias" class="news">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Últimas</span> Noticias
+                </h2>
+                <p class="section-subtitle">Mantente al día con nuestras actividades y logros</p>
+                
+                <div class="news-grid">
+                    <div class="news-card featured">
+                        <div class="news-date">
+                            <div class="date-day">15</div>
+                            <div class="date-month">DIC</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Colaboración</div>
+                            <h3>Nueva Alianza con Movimiento Círculo Verde</h3>
+                            <p>
+                                Formalizamos nuestra colaboración para el desarrollo de corredores verdes 
+                                en la Zona Metropolitana de Monterrey, enfocándonos en el monitoreo de 
+                                calidad del aire y la creación de indicadores ambientales.
+                            </p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-user"></i> Equipo GeoStats</span>
+                                <span><i class="fas fa-tag"></i> Medio Ambiente</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-date">
+                            <div class="date-day">28</div>
+                            <div class="date-month">NOV</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Taller</div>
+                            <h3>Taller de Cartografía Social Comunitaria</h3>
+                            <p>
+                                Realizamos un taller exitoso con 25 participantes de diferentes colonias 
+                                de Monterrey, donde aprendieron técnicas de mapeo participativo para 
+                                identificar problemáticas locales.
+                            </p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-users"></i> 25 participantes</span>
+                                <span><i class="fas fa-map-marker-alt"></i> LABNL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-date">
+                            <div class="date-day">10</div>
+                            <div class="date-month">NOV</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Reconocimiento</div>
+                            <h3>Reconocimiento a Socios Formadores</h3>
+                            <p>
+                                Celebramos a nuestros socios formadores que han contribuido 
+                                significativamente al crecimiento de la comunidad GeoStats 
+                                durante este año.
+                            </p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-award"></i> Ceremonia</span>
+                                <span><i class="fas fa-heart"></i> Comunidad</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-date">
+                            <div class="date-day">22</div>
+                            <div class="date-month">OCT</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Proyecto</div>
+                            <h3>Lanzamiento del Proyecto Agua NL</h3>
+                            <p>
+                                Iniciamos oficialmente el proyecto de rastreo de acuíferos en 
+                                colaboración con DataLab, utilizando datos abiertos para 
+                                visualizar el estado de los recursos hídricos.
+                            </p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-tint"></i> Recursos Hídricos</span>
+                                <span><i class="fas fa-chart-bar"></i> DataLab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-newsletter">
+                    <div class="newsletter-content">
+                        <h3>Mantente Informado</h3>
+                        <p>Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu email" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Suscribirse
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Nuestra</span> Galería
+                </h2>
+                <p class="gallery-subtitle">Momentos destacados de nuestro trabajo en la comunidad</p>
+                
+                <div class="gallery-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <img src="assets/images/WhatsApp Image 2025-01-29 at 7.27.43 PM.jpeg" alt="Ceremonia de Entrega de Reconocimientos">
+                                    <div class="slide-overlay">
+                                        <h3>Ceremonia de Entrega</h3>
+                                        <p>Reconocimientos a Socios Formadores</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <img src="assets/images/52964647761_e732d49b73_k.jpg" alt="Taller de Mapeo">
+                                    <div class="slide-overlay">
+                                        <h3>Taller de Mapeo</h3>
+                                        <p>Cartografía Social Comunitaria</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <img src="assets/images/52315482293_19f4134f21_c.jpg" alt="Trabajo en LABNL">
+                                    <div class="slide-overlay">
+                                        <h3>Trabajo en LABNL</h3>
+                                        <p>Sesión de Análisis Geoespacial</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <img src="assets/images/51725504048_400908dbee_c.jpg" alt="Análisis Colaborativo">
+                                    <div class="slide-overlay">
+                                        <h3>Análisis Colaborativo</h3>
+                                        <p>Metodología Participativa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <img src="assets/images/54187730281_f6800d6054_o.jpg" alt="Presentación de Resultados">
+                                    <div class="slide-overlay">
+                                        <h3>Presentación de Resultados</h3>
+                                        <p>Compartiendo Resultados</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <img src="assets/images/53376756209_bcc846db36_o (1).jpg" alt="Proyecto Comunitario">
+                                    <div class="slide-overlay">
+                                        <h3>Proyecto Comunitario</h3>
+                                        <p>Cartografía Social en Acción</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                        <button class="indicator" data-slide="2"></button>
+                        <button class="indicator" data-slide="3"></button>
+                        <button class="indicator" data-slide="4"></button>
+                        <button class="indicator" data-slide="5"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Ubícanos</span>
+                </h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Únete a Nuestra Comunidad</h3>
+                        <p>
+                            Si quieres más información o deseas unirte a uno de nuestros equipos, 
+                            ya sea en realización de mapas, marketing o diseño web, contáctanos.
+                            Somos una comunidad activa que opera en las instalaciones del LABNL.
+                        </p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>geostats.labnl@gmail.com</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-envelope-open"></i>
+                                <span>hola@geostatsmty.com</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>C. Washington 648, Centro, 64000 Monterrey, N.L.</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-clock"></i>
+                                <span>Nos reunimos todos los sábados de 3 a 5 pm</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <h4>¡Sigue a GeoStats!</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="organization">Organización</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Área de Interés</label>
+                            <select id="interest" name="interest">
+                                <option value="">Selecciona una opción</option>
+                                <option value="mapas">Realización de mapas</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="web">Diseño web</option>
+                                <option value="datos">Análisis de datos</option>
+                                <option value="colaboracion">Colaboración organizacional</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>GeoStats</span>
+                    </div>
+                    <p>Generando diálogos con cartografía social</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+                        <li><a href="#que-hacemos">¿Qué Hacemos?</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#colaboraciones">Colaboraciones</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>LABNL - Laboratorio Cultural Ciudadano</p>
+                    <p>C. Washington 648, Centro</p>
+                    <p>64000 Monterrey, N.L.</p>
+                    <p>Sábados: 15:00 - 18:00 hrs</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GeoStats. Una iniciativa de LABNL - Laboratorio Cultural Ciudadano.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
