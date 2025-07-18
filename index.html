@@ -513,8 +513,11 @@
                     <div class="newsletter-content">
                         <h3>Mantente Informado</h3>
                         <p>Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Tu email" required>
+                        <form class="newsletter-form" action="https://formspree.io/f/mwpeqank" method="POST">
+                            <input type="email" name="email" placeholder="Tu email" required>
+                            <input type="hidden" name="_subject" value="Nueva suscripción al newsletter de GeoStats">
+                            <input type="text" name="_gotcha" style="display:none">
+                            <input type="hidden" name="_next" value="https://uriel-lera.github.io/geostats-website/?suscrito=true">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-envelope"></i>
                                 Suscribirse
@@ -646,7 +649,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/mwpeqank" method="POST">
                         <div class="form-group">
                             <label for="name">Nombre</label>
                             <input type="text" id="name" name="name" required>
@@ -675,6 +678,13 @@
                             <label for="message">Mensaje</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
+                        <!-- Campo honeypot para evitar spam -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        <!-- Configuración adicional de Formspree -->
+                        <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde GeoStats">
+                        <input type="hidden" name="_cc" value="hola@geostatsmty.com">
+                        <!-- Redirección después del envío -->
+                        <input type="hidden" name="_next" value="https://uriel-lera.github.io/geostats-website/?enviado=true">
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i>
                             Enviar Mensaje

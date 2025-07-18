@@ -3,6 +3,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.querySelector('.contact-form');
+const newsletterForm = document.querySelector('.newsletter-form');
 const navbar = document.querySelector('.navbar');
 
 // Gallery Carousel Elements
@@ -133,51 +134,28 @@ if (carouselTrack) {
 
 // Contact Form Handling
 contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
     // Get form data
     const formData = new FormData(contactForm);
     const name = formData.get('name');
     const email = formData.get('email');
-    const organization = formData.get('organization');
-    const interest = formData.get('interest');
     const message = formData.get('message');
     
-    // Basic validation
+    // Basic validation - si falla, prevenir envío
     if (!name || !email || !message) {
+        e.preventDefault();
         showNotification('Por favor, completa todos los campos obligatorios.', 'error');
         return;
     }
     
     if (!isValidEmail(email)) {
+        e.preventDefault();
         showNotification('Por favor, ingresa un email válido.', 'error');
         return;
     }
     
-    // Enhanced success message based on interest
-    let successMessage = '¡Mensaje enviado exitosamente! Te contactaremos pronto.';
-    
-    if (interest) {
-        const interestMessages = {
-            'mapas': '¡Excelente! Nos pondremos en contacto contigo para integrarte al equipo de mapas.',
-            'marketing': '¡Genial! El equipo de marketing te contactará para coordinar actividades.',
-            'web': '¡Perfecto! Nos comunicaremos contigo para colaborar en diseño web.',
-            'datos': '¡Fantástico! Te contactaremos para integrarte al análisis de datos.',
-            'colaboracion': '¡Excelente! Nos pondremos en contacto para explorar oportunidades de colaboración.',
-            'otro': '¡Gracias por tu interés! Te contactaremos para conocer más sobre tu propuesta.'
-        };
-        
-        successMessage = interestMessages[interest] || successMessage;
-    }
-    
-    // Simulate form submission
-    showNotification(successMessage, 'success');
-    contactForm.reset();
-    
-    // Reset form states
-    formInputs.forEach(input => {
-        input.parentElement.classList.remove('focused', 'has-value');
-    });
+    // Si llegamos aquí, la validación pasó y permitimos que Formspree maneje el envío
+    // Mostrar mensaje de envío en progreso
+    showNotification('Enviando mensaje...', 'info');
 });
 
 // Email validation function
@@ -198,9 +176,18 @@ function showNotification(message, type) {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     
-    // Choose icon based on type
-    const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
-    const bgColor = type === 'success' ? 'var(--emerald)' : 'var(--rose)';
+    // Choose icon and color based on type
+    let icon, bgColor;
+    if (type === 'success') {
+        icon = 'fa-check-circle';
+        bgColor = 'var(--emerald)';
+    } else if (type === 'info') {
+        icon = 'fa-info-circle';
+        bgColor = 'var(--primary-color)';
+    } else {
+        icon = 'fa-exclamation-circle';
+        bgColor = 'var(--rose)';
+    }
     
     notification.innerHTML = `
         <div class="notification-content">
@@ -910,40 +897,44 @@ function enhanceCollaborationCards() {
 // Initialize collaboration cards
 enhanceCollaborationCards(); 
 
-// Newsletter form handling
-const newsletterForm = document.querySelector('.newsletter-form');
+// Newsletter Form Handling
 if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        const email = emailInput.value.trim();
+        const email = newsletterForm.querySelector('input[type="email"]').value;
         
         if (!email) {
+            e.preventDefault();
             showNotification('Por favor, ingresa tu email.', 'error');
             return;
         }
         
         if (!isValidEmail(email)) {
+            e.preventDefault();
             showNotification('Por favor, ingresa un email válido.', 'error');
             return;
         }
         
-        // Simulate newsletter subscription
-        showNotification('¡Gracias por suscribirte! Te mantendremos informado sobre nuestras actividades.', 'success');
-        emailInput.value = '';
-        
-        // Add loading state to button
-        const submitButton = newsletterForm.querySelector('.btn');
-        submitButton.classList.add('loading');
-        submitButton.disabled = true;
-        
-        setTimeout(() => {
-            submitButton.classList.remove('loading');
-            submitButton.disabled = false;
-        }, 2000);
+        // Si la validación pasa, permitir el envío
+        showNotification('Suscribiendo...', 'info');
     });
 }
+
+// Check URL parameters for success messages
+window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.get('enviado') === 'true') {
+        showNotification('¡Mensaje enviado exitosamente! Te contactaremos pronto.', 'success');
+        // Limpiar URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+    
+    if (urlParams.get('suscrito') === 'true') {
+        showNotification('¡Te has suscrito exitosamente! Recibirás nuestras noticias.', 'success');
+        // Limpiar URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+});
 
 // Enhanced news cards interaction
 function enhanceNewsCards() {
