@@ -18,15 +18,15 @@
     --rich-purple: #553C9A;             /* Púrpura Rico */
     --warm-red: #E53E3E;                /* Rojo Cálido */
     
-    /* Fondo Principal - Crema Elegante */
-    --background: #FFFEF7;              /* Crema muy suave */
-    --background-secondary: #FFF8E1;    /* Crema ligeramente más cálido */
+    /* Fondo Principal - CREMA VISIBLE como en la imagen local */
+    --background: #FDF6E3;              /* Crema visible y cálido */
+    --background-secondary: #F5E6C8;    /* Crema más oscuro para secciones */
     --surface: #FFFFFF;                 /* Blanco puro para tarjetas */
-    --surface-light: #F7FAFC;           /* Gris muy claro */
-    --border: #E2E8F0;                  /* Borde sutil */
+    --surface-light: #FEFCF7;           /* Crema muy claro */
+    --border: #E8D5B7;                  /* Borde crema visible */
     
     /* Color Navegación - Crema Capuchino Claro */
-    --nav-background: #F5F1E8;          /* Crema capuchino claro para navegación */
+    --nav-background: #F2E8D5;          /* Crema capuchino para navegación */
     
     /* Colores de Texto para Contraste */
     --text-primary: #1A202C;            /* Negro suave para títulos */
@@ -219,7 +219,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(245, 241, 232, 0.95);
+    background: rgba(242, 232, 213, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
@@ -314,7 +314,7 @@ body {
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 50%, var(--surface-light) 100%);
+    background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 50%, #F0DCC0 100%);
     position: relative;
     overflow: hidden;
 }
