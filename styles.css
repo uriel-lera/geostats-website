@@ -18,12 +18,12 @@
     --rich-purple: #553C9A;             /* Púrpura Rico */
     --warm-red: #E53E3E;                /* Rojo Cálido */
     
-    /* Fondo Principal - Blanco Amarillento Elegante */
-    --background: #FFFEF7;              /* Crema muy suave */
-    --background-secondary: #FFF8E1;    /* Crema ligeramente más cálido */
+    /* Fondo Principal - Color Crema Más Visible */
+    --background: #F7F3E9;              /* Crema más pronunciado */
+    --background-secondary: #F0E68C;    /* Crema dorado más visible */
     --surface: #FFFFFF;                 /* Blanco puro para tarjetas */
-    --surface-light: #F7FAFC;           /* Gris muy claro */
-    --border: #E2E8F0;                  /* Borde sutil */
+    --surface-light: #FEFEFE;           /* Blanco casi puro */
+    --border: #E2D5B7;                  /* Borde crema suave */
     
     /* Colores de Texto para Contraste */
     --text-primary: #1A202C;            /* Negro suave para títulos */
@@ -311,7 +311,7 @@ body {
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 50%, var(--surface-light) 100%);
+    background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 50%, #F5DEB3 100%);
     position: relative;
     overflow: hidden;
 }
