@@ -6,59 +6,49 @@
 }
 
 :root {
-    /* Colores Oficiales GeoStats - Tema Oscuro Original */
-    --primary-color: #003849;           /* Azul Principal */
-    --secondary-color: #FBE07B;         /* Amarillo Principal */
-    --accent-color: #9395D3;            /* Indigo */
-    --dark-purple: #331832;             /* Dark Purple */
-    --chili-red: #D74833;               /* Rojo Chili */
-    --pink: #B8336A;                    /* Rosa */
-    --pistachio: #88D18A;               /* Pistacho */
+    /* Nuevo Esquema de Colores - Tema Claro Elegante */
+    --primary-color: #2C5282;           /* Azul Profundo */
+    --secondary-color: #D69E2E;         /* Dorado Elegante */
+    --accent-color: #38A169;            /* Verde Esmeralda */
+    --tertiary-color: #805AD5;          /* Púrpura Refinado */
     
-    /* Neutros */
-    --black-secondary: #1E1E1E;         /* Negro Secundario */
-    --white-secondary: #F8F8F8;         /* Blanco Secundario */
-    --pure-white: #FFFFFF;              /* Blanco Puro */
+    /* Colores de Apoyo */
+    --warm-orange: #ED8936;             /* Naranja Cálido */
+    --deep-teal: #319795;               /* Verde Azulado */
+    --rich-purple: #553C9A;             /* Púrpura Rico */
+    --warm-red: #E53E3E;                /* Rojo Cálido */
     
-    /* Colores de Texto para Tema Oscuro */
-    --text-primary: #FFFFFF;            /* Blanco para títulos */
-    --text-secondary: #E2E8F0;          /* Gris claro para texto secundario */
-    --text-muted: #94A3B8;              /* Gris medio para texto auxiliar */
-    --text-accent: #FBE07B;             /* Amarillo para acentos */
+    /* Fondo Principal - Blanco Amarillento Elegante */
+    --background: #FFFEF7;              /* Crema muy suave */
+    --background-secondary: #FFF8E1;    /* Crema ligeramente más cálido */
+    --surface: #FFFFFF;                 /* Blanco puro para tarjetas */
+    --surface-light: #F7FAFC;           /* Gris muy claro */
+    --border: #E2E8F0;                  /* Borde sutil */
     
-    /* Backgrounds - Tema Oscuro Azul */
-    --background: #1A202C;              /* Fondo principal azul oscuro */
-    --background-secondary: #2D3748;    /* Fondo secundario azul gris */
-    --surface: #374151;                 /* Superficies grises azuladas */
-    --surface-light: #4A5568;           /* Superficies claras */
-    --border: #4A5568;                  /* Bordes */
+    /* Colores de Texto para Contraste */
+    --text-primary: #1A202C;            /* Negro suave para títulos */
+    --text-secondary: #2D3748;          /* Gris oscuro para texto */
+    --text-muted: #718096;              /* Gris medio para auxiliar */
+    --text-accent: #2C5282;             /* Azul para acentos */
     
-    /* Gradientes Arcoíris VIBRANTES E INTENSOS */
-    --gradient-primary: linear-gradient(135deg, #003849 0%, #331832 100%);
-    --gradient-secondary: linear-gradient(135deg, #FFD700 0%, #32CD32 100%);
-    --gradient-accent: linear-gradient(135deg, #8A2BE2 0%, #FF1493 100%);
-    --gradient-warm: linear-gradient(135deg, #FF4500 0%, #FF1493 100%);
-    --gradient-cool: linear-gradient(135deg, #003849 0%, #8A2BE2 100%);
-    --gradient-rainbow: linear-gradient(135deg, 
-        #FF0000 0%,     /* Rojo vibrante */
-        #FF8C00 14%,    /* Naranja intenso */
-        #FFD700 28%,    /* Amarillo brillante */
-        #32CD32 42%,    /* Verde lima vibrante */
-        #00BFFF 56%,    /* Azul cielo intenso */
-        #8A2BE2 70%,    /* Violeta vibrante */
-        #FF1493 84%,    /* Rosa fucsia */
-        #FF0000 100%);  /* Vuelta al rojo */
+    /* Gradientes de Dos Colores Dinámicos */
+    --gradient-primary: linear-gradient(135deg, #2C5282 0%, #805AD5 100%);     /* Azul a Púrpura */
+    --gradient-secondary: linear-gradient(135deg, #D69E2E 0%, #ED8936 100%);   /* Dorado a Naranja */
+    --gradient-accent: linear-gradient(135deg, #38A169 0%, #319795 100%);      /* Verde a Teal */
+    --gradient-warm: linear-gradient(135deg, #ED8936 0%, #E53E3E 100%);        /* Naranja a Rojo */
+    --gradient-cool: linear-gradient(135deg, #319795 0%, #553C9A 100%);        /* Teal a Púrpura */
+    --gradient-dynamic: linear-gradient(135deg, #2C5282 0%, #38A169 50%, #D69E2E 100%); /* Tres colores principales */
     
-    /* Colores de Redes Sociales Oficiales */
-    --instagram-color: #E4405F;         /* Instagram oficial */
-    --facebook-color: #1877F2;          /* Facebook oficial */
-    --linkedin-color: #0A66C2;          /* LinkedIn oficial */
+    /* Colores de Redes Sociales (sin cambios) */
+    --instagram-color: #E4405F;         
+    --facebook-color: #1877F2;          
+    --linkedin-color: #0A66C2;          
     
-    /* Sombras para Tema Oscuro */
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-    --shadow-colored: 0 10px 15px -3px rgba(147, 149, 211, 0.3);
+    /* Sombras para Tema Claro */
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    --shadow-colored: 0 10px 15px -3px rgba(44, 82, 130, 0.2);
     
     /* Animaciones */
     --transition: all 0.3s ease;
@@ -80,7 +70,7 @@ body {
     padding: 0 20px;
 }
 
-/* Floating Particles Background - Mejorado */
+/* Floating Particles Background - Colores Actualizados */
 .particles-container {
     position: fixed;
     top: 0;
@@ -97,11 +87,11 @@ body {
     height: 4px;
     background: var(--primary-color);
     border-radius: 50%;
-    opacity: 0.4;
+    opacity: 0.3;
     animation: float 6s ease-in-out infinite;
 }
 
-/* Más partículas con diferentes formas y tamaños */
+/* Partículas con colores del nuevo esquema */
 .particle:nth-child(1) {
     top: 20%;
     left: 20%;
@@ -135,7 +125,7 @@ body {
     top: 40%;
     left: 70%;
     animation-delay: 1s;
-    background: var(--chili-red);
+    background: var(--warm-red);
     border-radius: 2px;
     width: 6px;
     height: 2px;
@@ -145,13 +135,13 @@ body {
     top: 10%;
     left: 60%;
     animation-delay: 3s;
-    background: var(--pistachio);
+    background: var(--deep-teal);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     width: 5px;
     height: 5px;
 }
 
-/* Añadir elementos de datos flotantes */
+/* Elementos de datos flotantes */
 .data-elements {
     position: fixed;
     top: 0;
@@ -166,7 +156,7 @@ body {
     position: absolute;
     font-size: 12px;
     color: var(--text-muted);
-    opacity: 0.3;
+    opacity: 0.4;
     animation: dataFloat 8s ease-in-out infinite;
 }
 
@@ -203,15 +193,15 @@ body {
 @keyframes dataFloat {
     0%, 100% { 
         transform: translateY(0px) translateX(0px) rotate(0deg); 
-        opacity: 0.2;
+        opacity: 0.3;
     }
     33% { 
         transform: translateY(-15px) translateX(10px) rotate(120deg); 
-        opacity: 0.4;
+        opacity: 0.5;
     }
     66% { 
         transform: translateY(8px) translateX(-5px) rotate(240deg); 
-        opacity: 0.3;
+        opacity: 0.4;
     }
 }
 
@@ -221,17 +211,17 @@ body {
     66% { transform: translateY(5px) rotate(240deg); }
 }
 
-/* Navigation - Tema Oscuro Original */
+/* Navigation - Tema Claro */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(26, 32, 44, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
-    border-bottom: 1px solid rgba(147, 149, 211, 0.2);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .nav-container {
@@ -254,7 +244,7 @@ body {
 }
 
 .nav-logo img {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .nav-logo span {
@@ -283,7 +273,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .nav-link::after {
@@ -293,7 +283,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-rainbow);
+    background: var(--gradient-primary);
     transition: width 0.3s ease;
 }
 
@@ -315,13 +305,13 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section - Tema Oscuro */
+/* Hero Section - Tema Claro */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(135deg, #1A202C 0%, #2D3748 50%, #374151 100%);
+    background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 50%, var(--surface-light) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -333,7 +323,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(147, 149, 211, 0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(44, 82, 130, 0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
     opacity: 0.6;
 }
 
@@ -349,7 +339,7 @@ body {
 .floating-shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.1;
+    opacity: 0.08;
     animation: floatShape 8s ease-in-out infinite;
 }
 
@@ -407,7 +397,7 @@ body {
 }
 
 .highlight {
-    background: var(--gradient-rainbow);
+    background: var(--gradient-dynamic);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -418,15 +408,15 @@ body {
 @keyframes shimmer {
     0% { 
         background-position: 0% 50%; 
-        filter: brightness(1.2) saturate(1.5);
+        filter: brightness(1) saturate(1.2);
     }
     50% { 
         background-position: 100% 50%; 
-        filter: brightness(1.5) saturate(2);
+        filter: brightness(1.1) saturate(1.4);
     }
     100% { 
         background-position: 0% 50%; 
-        filter: brightness(1.2) saturate(1.5);
+        filter: brightness(1) saturate(1.2);
     }
 }
 
@@ -496,7 +486,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Visual - NUEVO DISEÑO DE SATELITE/MAPA AEREO */
+/* Hero Visual - Colores Actualizados */
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -509,14 +499,14 @@ body {
     width: 400px;
     height: 400px;
     background: radial-gradient(circle at center, 
-        rgba(0, 56, 73, 0.1) 0%, 
-        rgba(147, 149, 211, 0.05) 30%, 
-        rgba(251, 224, 123, 0.03) 60%, 
+        rgba(44, 82, 130, 0.08) 0%, 
+        rgba(56, 161, 105, 0.05) 30%, 
+        rgba(214, 158, 46, 0.03) 60%, 
         transparent 100%);
     border-radius: 50%;
     overflow: hidden;
     animation: satelliteOrbit 20s linear infinite;
-    border: 2px solid rgba(0, 56, 73, 0.2);
+    border: 2px solid rgba(44, 82, 130, 0.15);
 }
 
 /* Imagen satelital de fondo */
@@ -528,11 +518,11 @@ body {
     width: 300px;
     height: 300px;
     background: linear-gradient(45deg, 
-        rgba(136, 209, 138, 0.3) 0%, 
-        rgba(251, 224, 123, 0.3) 25%, 
-        rgba(147, 149, 211, 0.3) 50%, 
-        rgba(215, 72, 51, 0.3) 75%, 
-        rgba(184, 51, 106, 0.3) 100%);
+        rgba(56, 161, 105, 0.2) 0%, 
+        rgba(214, 158, 46, 0.2) 25%, 
+        rgba(128, 90, 213, 0.2) 50%, 
+        rgba(237, 137, 54, 0.2) 75%, 
+        rgba(49, 151, 149, 0.2) 100%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: terrainRotate 30s linear infinite reverse;
@@ -550,18 +540,18 @@ body {
         repeating-linear-gradient(0deg, 
             transparent, 
             transparent 38px, 
-            rgba(0, 56, 73, 0.1) 39px, 
-            rgba(0, 56, 73, 0.1) 40px),
+            rgba(44, 82, 130, 0.08) 39px, 
+            rgba(44, 82, 130, 0.08) 40px),
         repeating-linear-gradient(90deg, 
             transparent, 
             transparent 38px, 
-            rgba(0, 56, 73, 0.1) 39px, 
-            rgba(0, 56, 73, 0.1) 40px);
+            rgba(44, 82, 130, 0.08) 39px, 
+            rgba(44, 82, 130, 0.08) 40px);
     border-radius: 50%;
     animation: gridScan 8s ease-in-out infinite;
 }
 
-/* Puntos de datos GPS mejorados */
+/* Puntos de datos GPS actualizados */
 .map-point {
     position: absolute;
     width: 8px;
@@ -569,7 +559,7 @@ body {
     border-radius: 50%;
     animation: gpsPulse 2s ease-in-out infinite;
     border: 2px solid white;
-    box-shadow: 0 0 10px rgba(0, 56, 73, 0.5);
+    box-shadow: 0 0 10px rgba(44, 82, 130, 0.3);
     z-index: 3;
 }
 
@@ -580,35 +570,35 @@ body {
     left: -6px;
     right: -6px;
     bottom: -6px;
-    border: 1px solid rgba(0, 56, 73, 0.3);
+    border: 1px solid rgba(44, 82, 130, 0.2);
     border-radius: 50%;
     animation: radarPing 3s ease-out infinite;
 }
 
-/* Coordenadas específicas para los puntos GPS */
+/* Coordenadas específicas para los puntos GPS con colores actualizados */
 .map-point:nth-child(1) { 
-    background: var(--pistachio); 
+    background: var(--accent-color); 
     top: 20%; 
     left: 30%;
     animation-delay: 0s;
 }
 
 .map-point:nth-child(2) { 
-    background: var(--chili-red); 
+    background: var(--warm-red); 
     top: 65%; 
     right: 25%;
     animation-delay: 0.5s;
 }
 
 .map-point:nth-child(3) { 
-    background: var(--pink); 
+    background: var(--tertiary-color); 
     top: 40%; 
     left: 15%;
     animation-delay: 1s;
 }
 
 .map-point:nth-child(4) { 
-    background: var(--accent-color); 
+    background: var(--deep-teal); 
     top: 75%; 
     left: 60%;
     animation-delay: 1.5s;
@@ -621,14 +611,14 @@ body {
     animation-delay: 2s;
 }
 
-/* Líneas de conexión de datos - como rutas aéreas */
+/* Líneas de conexión actualizadas */
 .map-line {
     position: absolute;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        rgba(0, 56, 73, 0.4) 20%, 
-        rgba(147, 149, 211, 0.6) 50%, 
-        rgba(0, 56, 73, 0.4) 80%, 
+        rgba(44, 82, 130, 0.3) 20%, 
+        rgba(56, 161, 105, 0.4) 50%, 
+        rgba(44, 82, 130, 0.3) 80%, 
         transparent 100%);
     height: 1px;
     animation: dataFlow 4s ease-in-out infinite;
@@ -651,19 +641,19 @@ body {
     animation-delay: 2s;
 }
 
-/* Elementos de datos geográficos - coordenadas */
+/* Elementos de datos geográficos actualizados */
 .geo-data {
     position: absolute;
     font-size: 10px;
     color: var(--primary-color);
     font-weight: 600;
     font-family: 'Courier New', monospace;
-    opacity: 0.7;
+    opacity: 0.8;
     animation: coordinateUpdate 6s ease-in-out infinite;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2px 4px;
     border-radius: 3px;
-    border: 1px solid rgba(0, 56, 73, 0.2);
+    border: 1px solid rgba(44, 82, 130, 0.15);
     z-index: 4;
 }
 
@@ -691,7 +681,7 @@ body {
     animation-delay: 4.5s;
 }
 
-/* Halo exterior del mapa */
+/* Halo exterior del mapa actualizado */
 .map-glow {
     position: absolute;
     top: -30px;
@@ -700,8 +690,8 @@ body {
     bottom: -30px;
     border-radius: 50%;
     background: radial-gradient(circle, 
-        rgba(0, 56, 73, 0.1) 0%, 
-        rgba(147, 149, 211, 0.05) 40%, 
+        rgba(44, 82, 130, 0.08) 0%, 
+        rgba(56, 161, 105, 0.04) 40%, 
         transparent 70%);
     animation: satelliteGlow 6s ease-in-out infinite;
     z-index: 1;
@@ -727,12 +717,12 @@ body {
     0%, 100% { 
         opacity: 1; 
         transform: scale(1); 
-        box-shadow: 0 0 10px rgba(0, 56, 73, 0.5);
+        box-shadow: 0 0 10px rgba(44, 82, 130, 0.3);
     }
     50% { 
         opacity: 0.8; 
         transform: scale(1.2); 
-        box-shadow: 0 0 20px rgba(0, 56, 73, 0.8);
+        box-shadow: 0 0 20px rgba(44, 82, 130, 0.5);
     }
 }
 
@@ -775,7 +765,7 @@ body {
     }
 }
 
-/* Section Decorations */
+/* Section Decorations - Colores Actualizados */
 .section-decoration {
     position: absolute;
     top: 0;
@@ -791,7 +781,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(56, 161, 105, 0.08) 0%, transparent 70%);
     top: -150px;
     right: -150px;
     animation: float 10s ease-in-out infinite;
@@ -803,13 +793,13 @@ body {
     height: 0;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
-    border-bottom: 150px solid rgba(139, 92, 246, 0.1);
+    border-bottom: 150px solid rgba(128, 90, 213, 0.08);
     bottom: -75px;
     left: -50px;
     animation: float 12s ease-in-out infinite reverse;
 }
 
-/* Section Styles */
+/* Section Styles - Actualizados */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -821,7 +811,7 @@ body {
 }
 
 .title-accent {
-    background: var(--gradient-rainbow);
+    background: var(--gradient-dynamic);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -841,7 +831,7 @@ body {
     border-radius: 2px;
 }
 
-/* About Section - Tema Oscuro */
+/* About Section - Tema Claro */
 .about {
     padding: 6rem 0;
     background: var(--background-secondary);
@@ -911,20 +901,21 @@ body {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem;
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(56, 161, 105, 0.08);
     border-radius: 0.75rem;
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(56, 161, 105, 0.15);
     transition: var(--transition);
 }
 
 .value-item:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--pistachio);
+    border-color: var(--accent-color);
+    background: rgba(56, 161, 105, 0.12);
 }
 
 .value-item i {
-    color: var(--pistachio);
+    color: var(--accent-color);
     font-size: 1.3rem;
 }
 
@@ -1021,10 +1012,10 @@ body {
     font-weight: 500;
 }
 
-/* Projects Section - Tema Oscuro */
+/* Projects Section - Tema Claro */
 .projects {
     padding: 6rem 0;
-    background: var(--background-secondary);
+    background: var(--background);
 }
 
 .projects-grid {
@@ -1067,7 +1058,7 @@ body {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--secondary-color);
+    border-color: var(--primary-color);
 }
 
 .project-icon {
@@ -1115,37 +1106,37 @@ body {
 }
 
 .tag {
-    background: rgba(0, 56, 73, 0.1);
+    background: rgba(44, 82, 130, 0.08);
     color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 56, 73, 0.2);
+    border: 1px solid rgba(44, 82, 130, 0.15);
 }
 
 .project-card:nth-child(2) .tag {
-    background: rgba(50, 205, 50, 0.15);
-    color: #32CD32;
-    border-color: rgba(50, 205, 50, 0.3);
+    background: rgba(214, 158, 46, 0.08);
+    color: var(--secondary-color);
+    border-color: rgba(214, 158, 46, 0.15);
 }
 
 .project-card:nth-child(3) .tag {
-    background: rgba(138, 43, 226, 0.15);
-    color: #8A2BE2;
-    border-color: rgba(138, 43, 226, 0.3);
+    background: rgba(56, 161, 105, 0.08);
+    color: var(--accent-color);
+    border-color: rgba(56, 161, 105, 0.15);
 }
 
 .project-card:nth-child(4) .tag {
-    background: rgba(255, 69, 0, 0.15);
-    color: #FF4500;
-    border-color: rgba(255, 69, 0, 0.3);
+    background: rgba(237, 137, 54, 0.08);
+    color: var(--warm-orange);
+    border-color: rgba(237, 137, 54, 0.15);
 }
 
-/* Services Section - Tema Oscuro */
+/* Services Section - Tema Claro */
 .services {
     padding: 6rem 0;
-    background: var(--background);
+    background: var(--background-secondary);
 }
 
 .services-content {
@@ -1200,18 +1191,18 @@ body {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     padding: 0.75rem;
-    background: rgba(50, 205, 50, 0.08);
+    background: rgba(56, 161, 105, 0.08);
     border-radius: 0.5rem;
     transition: var(--transition);
 }
 
 .service-features li:hover {
-    background: rgba(50, 205, 50, 0.15);
+    background: rgba(56, 161, 105, 0.12);
     transform: translateX(5px);
 }
 
 .service-features i {
-    color: #32CD32;
+    color: var(--accent-color);
     font-size: 1.2rem;
 }
 
@@ -1250,17 +1241,17 @@ body {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     padding: 0.75rem;
-    background: rgba(215, 72, 51, 0.05);
+    background: rgba(237, 137, 54, 0.08);
     border-radius: 0.5rem;
 }
 
 .schedule-item i, .schedule-location i {
-    color: var(--chili-red);
+    color: var(--warm-orange);
     font-size: 1.2rem;
     width: 20px;
 }
 
-/* Gallery Section - Tema Oscuro */
+/* Gallery Section - Tema Claro */
 .gallery {
     padding: 6rem 0;
     background: var(--background);
@@ -1333,7 +1324,7 @@ body {
     right: 0;
     bottom: 0;
     background: var(--gradient-primary);
-    opacity: 0.1;
+    opacity: 0.05;
     z-index: 1;
 }
 
@@ -1398,21 +1389,21 @@ body {
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: rgba(147, 149, 211, 0.3);
+    background: rgba(44, 82, 130, 0.2);
     cursor: pointer;
     transition: var(--transition);
 }
 
 .indicator.active {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     transform: scale(1.2);
 }
 
 .indicator:hover {
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 
-/* Contact Section - Tema Oscuro */
+/* Contact Section - Tema Claro */
 .contact {
     padding: 6rem 0;
     background: var(--background-secondary);
@@ -1470,13 +1461,13 @@ body {
     gap: 1rem;
     color: var(--text-secondary);
     padding: 1rem;
-    background: rgba(147, 149, 211, 0.05);
+    background: rgba(56, 161, 105, 0.08);
     border-radius: 0.75rem;
     transition: var(--transition);
 }
 
 .contact-method:hover {
-    background: rgba(147, 149, 211, 0.1);
+    background: rgba(56, 161, 105, 0.12);
     transform: translateX(5px);
 }
 
@@ -1486,7 +1477,7 @@ body {
     width: 20px;
 }
 
-/* Form Styles */
+/* Form Styles - Actualizados */
 .contact-form {
     background: var(--surface);
     padding: 2rem;
@@ -1534,8 +1525,8 @@ body {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(251, 224, 123, 0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.15);
 }
 
 .form-group textarea {
@@ -1553,7 +1544,7 @@ body {
     padding: 0.5rem;
 }
 
-/* Footer - Tema Oscuro */
+/* Footer - Tema Claro */
 .footer {
     background: var(--surface);
     padding: 3rem 0 1rem;
@@ -1568,7 +1559,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--gradient-rainbow);
+    background: var(--gradient-dynamic);
 }
 
 .footer-content {
@@ -1625,7 +1616,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: var(--pistachio);
+    color: var(--accent-color);
     transform: translateX(5px);
 }
 
@@ -1674,7 +1665,7 @@ html {
     transform: translateY(0);
 }
 
-/* Historia Section */
+/* Historia Section - Actualizada */
 .history-section {
     margin-bottom: 4rem;
 }
@@ -1721,13 +1712,13 @@ html {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: rgba(50, 205, 50, 0.08);
+    background: rgba(56, 161, 105, 0.08);
     border-radius: 0.75rem;
     transition: var(--transition);
 }
 
 .timeline-item:hover {
-    background: rgba(50, 205, 50, 0.15);
+    background: rgba(56, 161, 105, 0.12);
     transform: translateX(5px);
 }
 
@@ -1758,7 +1749,7 @@ html {
     font-size: 0.9rem;
 }
 
-/* Motivation Section */
+/* Motivation Section - Actualizada */
 .motivation-section {
     margin-bottom: 3rem;
 }
@@ -1770,7 +1761,7 @@ html {
     font-family: 'Playfair Display', serif;
 }
 
-/* Mission and Vision Grid */
+/* Mission and Vision Grid - Actualizada */
 .mission-values-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1838,7 +1829,7 @@ html {
     gap: 1.5rem;
 }
 
-/* Join Options */
+/* Join Options - Actualizada */
 .join-options {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -1867,16 +1858,16 @@ html {
 }
 
 .join-options li:hover {
-    background: rgba(215, 72, 51, 0.1);
+    background: rgba(237, 137, 54, 0.08);
     transform: translateX(5px);
 }
 
 .join-options i {
-    color: var(--chili-red);
+    color: var(--warm-orange);
     font-size: 1.1rem;
 }
 
-/* Collaborations Section - Tema Oscuro */
+/* Collaborations Section - Tema Claro */
 .collaborations {
     padding: 6rem 0;
     background: var(--background);
@@ -1914,7 +1905,7 @@ html {
 }
 
 .collaboration-card.featured::before {
-    background: var(--gradient-rainbow);
+    background: var(--gradient-dynamic);
 }
 
 .collaboration-card:hover::before {
@@ -1924,7 +1915,7 @@ html {
 .collaboration-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--pistachio);
+    border-color: var(--accent-color);
 }
 
 .collaboration-icon {
@@ -1940,7 +1931,7 @@ html {
 }
 
 .collaboration-card.featured .collaboration-icon {
-    background: var(--gradient-rainbow);
+    background: var(--gradient-dynamic);
     width: 100px;
     height: 100px;
 }
@@ -1976,16 +1967,16 @@ html {
 }
 
 .collaboration-details {
-    background: rgba(50, 205, 50, 0.08);
+    background: rgba(56, 161, 105, 0.08);
     padding: 1.5rem;
     border-radius: 0.75rem;
-    border: 1px solid rgba(50, 205, 50, 0.2);
+    border: 1px solid rgba(56, 161, 105, 0.15);
 }
 
 .collaboration-details h4 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: #32CD32;
+    color: var(--accent-color);
 }
 
 .collaboration-details ul {
@@ -2002,11 +1993,11 @@ html {
 
 .collaboration-details li::before {
     content: '•';
-    color: #32CD32;
+    color: var(--accent-color);
     font-weight: bold;
 }
 
-/* Social Links */
+/* Social Links - Sin cambios en colores oficiales */
 .social-links {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -2037,17 +2028,17 @@ html {
     transition: var(--transition);
 }
 
-/* Instagram - Color oficial */
+/* Instagram - Color oficial (sin cambios) */
 .social-icon:nth-child(1) {
     background: linear-gradient(45deg, var(--instagram-color) 0%, #F56040 50%, #FCAF45 100%);
 }
 
-/* Facebook - Color oficial */
+/* Facebook - Color oficial (sin cambios) */
 .social-icon:nth-child(2) {
     background: var(--facebook-color);
 }
 
-/* LinkedIn - Color oficial */
+/* LinkedIn - Color oficial (sin cambios) */
 .social-icon:nth-child(3) {
     background: var(--linkedin-color);
 }
@@ -2061,7 +2052,7 @@ html {
     font-size: 1.2rem;
 }
 
-/* Section Subtitles */
+/* Section Subtitles - Actualizada */
 .section-subtitle {
     text-align: center;
     color: var(--text-secondary);
@@ -2072,7 +2063,7 @@ html {
     margin-right: auto;
 }
 
-/* News Section - Tema Oscuro */
+/* News Section - Tema Claro */
 .news {
     padding: 6rem 0;
     background: var(--background-secondary);
@@ -2098,7 +2089,7 @@ html {
 .news-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--secondary-color);
+    border-color: var(--primary-color);
 }
 
 .news-card.featured {
@@ -2116,7 +2107,7 @@ html {
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--gradient-rainbow);
+    background: var(--gradient-dynamic);
 }
 
 .news-date {
@@ -2159,7 +2150,7 @@ html {
 
 .news-category {
     display: inline-block;
-    background: rgba(0, 56, 73, 0.1);
+    background: rgba(44, 82, 130, 0.08);
     color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
@@ -2168,7 +2159,7 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
-    border: 1px solid rgba(0, 56, 73, 0.2);
+    border: 1px solid rgba(44, 82, 130, 0.15);
 }
 
 .news-content h3 {
@@ -2277,7 +2268,7 @@ html {
 
 .newsletter-form .btn {
     background: white;
-    color: var(--pistachio);
+    color: var(--secondary-color);
     border: none;
     white-space: nowrap;
 }
@@ -2287,7 +2278,7 @@ html {
     transform: translateY(-2px);
 }
 
-/* Enhanced Responsive Design */
+/* Enhanced Responsive Design - Sin cambios mayores */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -2448,7 +2439,7 @@ html {
         height: 80px;
     }
 
-    /* News responsive */
+    /* News responsive - sin cambios */
     .news-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
